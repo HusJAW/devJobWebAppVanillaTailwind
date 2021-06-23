@@ -616,4 +616,9 @@ video {
 		--tw-text-opacity: 1;
 		color: rgba(239, 68, 68, var(--tw-text-opacity));
 	}
+
+	.custom\:text-green-500 {
+		--tw-text-opacity: 1;
+		color: rgba(16, 185, 129, var(--tw-text-opacity));
+	}
 }
