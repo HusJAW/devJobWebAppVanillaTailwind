@@ -1,3 +1,6 @@
 @tailwind base;
+:root {
+    font-size: 62.5%;
+}
 @tailwind components;
 @tailwind utilities;
