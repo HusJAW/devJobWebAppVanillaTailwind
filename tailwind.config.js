@@ -1,9 +1,9 @@
 const plugin = require('tailwindcss/plugin')
 
-const nextOnChecked = plugin(function ({ addVariant, e }) {
-  addVariant('nextOnChecked', ({ modifySelectors, separator }) => {
+const labelChildOnChecked = plugin(function ({ addVariant, e }) {
+  addVariant('labelChildOnChecked', ({ modifySelectors, separator }) => {
     modifySelectors(({ className }) => {
-    return `.${e(`nextOnChecked${separator}${className}`)}:checked + *`;
+    return `.${e(`labelChildOnChecked${separator}${className}`)}:checked + * *`;
     })
   });
 });
@@ -23,8 +23,10 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ['checked', 'important', 'nextOnChecked'],
+      backgroundColor: ['checked', 'important', 'labelChildOnChecked'],
       borderColor: ['checked'],
+      translate: ['labelChildOnChecked'],
+      transform: ['labelChildOnChecked']
     }
   },
   plugins: [
@@ -38,7 +40,7 @@ module.exports = {
         })
       })
     })
-  , nextOnChecked
+  , labelChildOnChecked
 ],
 }
 // module.exports = {
